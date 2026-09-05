@@ -31,7 +31,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     animationcontroller.forward();
 
     Future.delayed(const Duration(seconds: 2), () {
-      GoRouter.of(context).push(AppRouters.kHomeView);
+      GoRouter.of(context).push(AppRouters.kBookDetailsView);
     });
   }
 

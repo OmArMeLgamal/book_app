@@ -7,15 +7,15 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-      const CustomBookDetailsAppBar(),  
-    const  FeaturedListViewItems(),
-      ]
-      
+        const CustomBookDetailsAppBar(),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: width * .20, vertical: 20),
+          child: const FeaturedListViewItems(),
+        ),
+      ],
     );
-    
-    
   }
 }
-
