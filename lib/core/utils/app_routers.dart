@@ -15,7 +15,9 @@ abstract class AppRouters {
      
       GoRoute(path: kHomeView, builder: (context, state) => const HomeView()),
       GoRoute(path: kBookDetailsView, builder: (context, state) => const BookDetails()),
-    
+     
+
+     
     ],
   );
 }
