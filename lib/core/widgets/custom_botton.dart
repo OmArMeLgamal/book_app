@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.backgroundColor, required this.textColor,  this.borderRadius});
+  const CustomButton({super.key, required this.backgroundColor, required this.textColor,  this.borderRadius, this.text = '19.99 €'});
 final Color backgroundColor;
 final Color textColor;
 final BorderRadius? borderRadius;
-
+final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ final BorderRadius? borderRadius;
         //  minimumSize: const Size(150, 50),
       ),
       child: Text(
-        '19.99 €',
+        text,
         style: TextStyle(fontSize: 16, color:textColor, fontWeight: FontWeight.w600),
       ),
     );

@@ -2,8 +2,8 @@ import 'package:bookly_app/Features/Splash/presentation/views/widgets/Book_Ratin
 import 'package:bookly_app/Features/Splash/presentation/views/widgets/Custom_Book_Details_App_Bar.dart';
 import 'package:bookly_app/Features/Splash/presentation/views/widgets/book_action.dart';
 import 'package:bookly_app/Features/Splash/presentation/views/widgets/feature_list_view_item.dart';
+import 'package:bookly_app/Features/Splash/presentation/views/widgets/similar_books_listView.dart';
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/core/widgets/custom_botton.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -16,7 +16,7 @@ class BookDetailsViewBody extends StatelessWidget {
       children: [
         const CustomBookDetailsAppBar(),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * .20, vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: width * .25, vertical: 20),
           child: const FeaturedListViewItems(),
         ),
         SizedBox(height: 43),
@@ -30,9 +30,20 @@ class BookDetailsViewBody extends StatelessWidget {
         BookRating(mainAxisAlignment: MainAxisAlignment.center),
         SizedBox(height: 5),
         BookAction(),
+        const SizedBox(height: 25),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Text(
+              'You can also like',
+              style: Styles.title18.copyWith(fontWeight: FontWeight.w500),
+            ),
+          ),
+        ),
+        const SimilarBooksListView(),
       ],
     );
   }
 }
-
 
