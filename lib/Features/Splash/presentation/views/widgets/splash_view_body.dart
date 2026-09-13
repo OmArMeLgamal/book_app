@@ -1,4 +1,3 @@
-import 'package:bookly_app/Features/Splash/presentation/views/home_view.dart';
 import 'package:bookly_app/core/utils/app_routers.dart';
 import 'package:bookly_app/core/utils/assets_data.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +11,8 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody>
-    with TickerProviderStateMixin { late AnimationController animationcontroller;
+    with TickerProviderStateMixin {
+  late AnimationController animationcontroller;
 
   late Animation<Offset> slidingAnimation;
   @override
@@ -30,7 +30,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     animationcontroller.forward();
 
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 3), () {
       GoRouter.of(context).push(AppRouters.kBookDetailsView);
     });
   }
@@ -61,9 +61,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
               position: slidingAnimation,
               child: Padding(
                 padding: const EdgeInsets.only(right: 80.0),
-                child: const Text(
-                  'Enjoy Reading  Books',
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: const Text(
+                    'Enjoy Reading  Books',
+                    style: TextStyle(color: Colors.white, fontSize: 14),
+                  ),
                 ),
               ),
             );
