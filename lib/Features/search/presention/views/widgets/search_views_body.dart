@@ -10,6 +10,7 @@ class SearchViewsBody extends StatelessWidget {
     return Padding(
       padding: EdgeInsetsGeometry.symmetric(horizontal: 30),
       child: Column(children: [CustomSearchTextField()]),
+     
     );
   }
 }
