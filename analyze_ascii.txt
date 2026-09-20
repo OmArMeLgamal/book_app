@@ -1,0 +1,10 @@
+Analyzing home_repo_implement.dart, api_services.dart, Failure.dart...
+
+  error - lib\Features\home\data\repos\home_repo_implement.dart:14:12 - A value of type 'Future<Map<String, dynamic>>' can't be returned from the method 'FetchBestSellerBooks' because it has a return type of 'Future<Either<Failure, List<BookModel>>>'. - return_of_invalid_type
+warning - lib\core\utils\api_services.dart:2:8 - Unused import: 'package:bookly_app/core/errors/Failure.dart'. Try removing the import directive. - unused_import
+warning - lib\core\utils\api_services.dart:3:8 - Unused import: 'package:flutter/material.dart'. Try removing the import directive. - unused_import
+   info - lib\Features\home\data\repos\home_repo_implement.dart:13:44 - The variable name 'FetchBestSellerBooks' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - non_constant_identifier_names
+   info - lib\Features\home\data\repos\home_repo_implement.dart:21:44 - The variable name 'FetchFeaturedBooks' isn't a lowerCamelCase identifier. Try changing the name to follow the lowerCamelCase style. - non_constant_identifier_names
+   info - lib\core\errors\Failure.dart:1:1 - The file name 'Failure.dart' isn't a lower_case_with_underscores identifier. Try changing the name to follow the lower_case_with_underscores style. - file_names
+
+6 issues found.
